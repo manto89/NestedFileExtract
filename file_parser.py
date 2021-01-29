@@ -43,6 +43,8 @@ def extract(zip_path, output_dir):
 def parse_file(path):
     first_file = True
     for line in open(path, 'r').readlines():
+        if len(line) < 1:
+            continue
         if line[0] == '.':
             go_home()
             change_dir(line[:-1])
