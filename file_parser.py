@@ -64,7 +64,7 @@ def parse_file(path):
                     rars = find_rar(os.path.join(HOME_PATH, temp_rar_file))
                     if len(rars) > 0:
                         rar_file = os.path.join(HOME_PATH, temp_rar_file, rars[0])
-            if len(rar_file) < 0:
+            if len(rar_file) < 1:
                 raise Exception("Unable to find extracted rar file from " + line)
             rar_output_folder = os.path.join(HOME_PATH, 'res')
             if not os.path.exists(rar_output_folder):
