@@ -5,7 +5,7 @@ from file_parser import parse_file
 
 def main(argv):
     input_files = []
-    help_text = 'main.py -i <input_file> -d <folder>'
+    help_text = 'main.py -i <input_file>'
     try:
         opts, args = getopt.getopt(argv, "h:i:", ["ifile="])
     except getopt.GetoptError:
