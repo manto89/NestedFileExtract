@@ -68,11 +68,12 @@ def parse_file(path):
                 os.mkdir(rar_output_folder)
             final_folder = extract(rar_file, rar_output_folder)
             final_filename = os.listdir(final_folder)[0]
+            final_file = os.path.join(final_folder, final_filename)
             shutil.rmtree(zip_output_path)
             output_folder = os.path.join(HOME_PATH, 'output')
             if not os.path.exists(output_folder):
                 os.mkdir(output_folder)
-            final_file = os.path.join(output_folder, final_filename)
-            shutil.copy(final_file, final_file)
+            output_file = os.path.join(output_folder, final_filename)
+            shutil.copy(final_file, output_file)
             shutil.rmtree(rar_output_folder)
-            print(final_file)
+            print(output_file)
